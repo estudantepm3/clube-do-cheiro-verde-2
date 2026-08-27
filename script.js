@@ -92,6 +92,8 @@
       opcao.classList.toggle('ativo', ativa);
       opcao.setAttribute('aria-pressed', String(ativa));
     });
+
+    aplicarBlackFriday(ciclo);
   }
 
   opcoesCiclo.forEach(function (opcao) {
@@ -99,6 +101,61 @@
       trocarCiclo(opcao.getAttribute('data-ciclo'));
     });
   });
+
+  /* ---------- 4b. Black Friday: banner e 20% nos planos ---------- */
+  var BF = { ativo: true, desconto: 0.20, chave: 'bf-cheiroverde-2026' };
+
+  function aplicarBlackFriday(ciclo) {
+    if (!BF.ativo) return;
+
+    document.querySelectorAll('.plano').forEach(function (plano) {
+      var valorEl = plano.querySelector('.plano__valor');
+      var antesEl = plano.querySelector('.plano__antes');
+      if (valorEl && antesEl) {
+        var base = parseInt(valorEl.getAttribute('data-' + ciclo), 10);
+        if (!isNaN(base)) {
+          valorEl.textContent = Math.round(base * (1 - BF.desconto));
+          antesEl.textContent = 'de R$ ' + base;
+        }
+      }
+
+      var cobrancaEl = plano.querySelector('.plano__cobranca');
+      if (cobrancaEl) {
+        var texto = cobrancaEl.getAttribute('data-' + ciclo) || cobrancaEl.textContent;
+        cobrancaEl.textContent = texto.replace(/R\$\s*(\d+)/, function (_todo, n) {
+          return 'R$ ' + Math.round(parseInt(n, 10) * (1 - BF.desconto));
+        });
+      }
+    });
+  }
+
+  if (BF.ativo) {
+    document.body.classList.add('tem-bf');
+
+    // linha "de R$ X" acima de cada preço
+    document.querySelectorAll('.plano__preco').forEach(function (precoEl) {
+      var antes = document.createElement('p');
+      antes.className = 'plano__antes';
+      precoEl.parentNode.insertBefore(antes, precoEl);
+    });
+
+    aplicarBlackFriday('mensal');
+
+    // fechar o banner (o desconto continua valendo)
+    var banner = document.getElementById('bf');
+    var bannerFechar = document.getElementById('bf-fechar');
+
+    if (banner && bannerFechar) {
+      try {
+        if (localStorage.getItem(BF.chave) === 'fechado') banner.hidden = true;
+      } catch (erro) { /* sem localStorage: mantém visível */ }
+
+      bannerFechar.addEventListener('click', function () {
+        banner.hidden = true;
+        try { localStorage.setItem(BF.chave, 'fechado'); } catch (erro) {}
+      });
+    }
+  }
 
   /* ---------- 5. Doses: uma faixa de pigmento por tempero do plano ---------- */
   var pigmentosDaCasa = ['#B5330E', '#E9AE2B', '#2F5A33', '#C9647A', '#B7202B', '#56331E'];
