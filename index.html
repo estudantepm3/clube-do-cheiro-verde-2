@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clube do Cheiro Verde</title>
+<meta name="description" content="Todo mês, temperos artesanais de uma região do Brasil, moídos na semana em que saem para a sua casa. Frete incluso, cancela quando quiser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Piazzolla:opsz,wght@8..30,600..900&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="topo" id="topo">
+  <div class="topo__interno">
+    <a class="marca" href="#topo">
+      <span class="marca__regua" aria-hidden="true"></span>
+      <span class="marca__nome">Clube do Cheiro Verde</span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#planos">Planos</a>
+      <a href="#depoimentos">Quem assina</a>
+      <a href="#contato">Contato</a>
+      <a class="botao botao--claro menu__cta" href="#planos">Assinar</a>
+    </nav>
+
+    <button class="menu-botao" id="menu-botao" aria-expanded="false" aria-controls="menu">
+      <span class="menu-botao__barras" aria-hidden="true"></span>
+      <span class="menu-botao__texto">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__texto container">
+      <p class="rotulo rotulo--claro">Clube de temperos artesanais · caixa nº 47</p>
+      <h1 class="hero__titulo">
+        O Brasil tem mais de mil temperos.<br>
+        <em>Sua cozinha conhece uns cinco.</em>
+      </h1>
+      <p class="hero__linha">
+        Todo mês a gente escolhe uma região do país, compra direto de quem planta e mói os
+        temperos na mesma semana em que a caixa sai para a sua casa. Vêm as receitas junto.
+      </p>
+      <div class="hero__acoes">
+        <a class="botao botao--claro" href="#planos">Escolher meu plano</a>
+        <a class="link-seta" href="#prateleira">Ver a caixa do mês</a>
+      </div>
+    </div>
+
+    <div class="prateleira-bloco">
+      <p class="rotulo rotulo--claro prateleira__legenda">
+        Na moagem desta semana — toque em um pigmento
+      </p>
+
+      <div class="prateleira" id="prateleira">
+        <button class="pigmento" style="--cor:#C2380F; --i:0" aria-expanded="false">
+          <span class="pigmento__nome">Urucum</span>
+          <span class="pigmento__ficha">
+            <span class="pigmento__origem">Rio Branco, Acre</span>
+            <span class="pigmento__nota">Cor de brasa e gosto de terra. É o colorau sem farinha nenhuma no meio.</span>
+          </span>
+        </button>
+
+        <button class="pigmento" style="--cor:#E9AE2B; --i:1" aria-expanded="false">
+          <span class="pigmento__nome">Açafrão-da-terra</span>
+          <span class="pigmento__ficha">
+            <span class="pigmento__origem">Mara Rosa, Goiás</span>
+            <span class="pigmento__nota">Raiz seca no sol e moída fina. Amarga no começo, doce no fim.</span>
+          </span>
+        </button>
+
+        <button class="pigmento" style="--cor:#2F5A33; --i:2" aria-expanded="false">
+          <span class="pigmento__nome">Jambu</span>
+          <span class="pigmento__ficha">
+            <span class="pigmento__origem">Santo Antônio do Tauá, Pará</span>
+            <span class="pigmento__nota">A folha que treme a boca. Uma pitada muda o prato inteiro.</span>
+          </span>
+        </button>
+
+        <button class="pigmento" style="--cor:#C9647A; --i:3" aria-expanded="false">
+          <span class="pigmento__nome">Rosa-pimenta</span>
+          <span class="pigmento__ficha">
+            <span class="pigmento__origem">Santa Teresa, Espírito Santo</span>
+            <span class="pigmento__nota">Colhida à mão e seca à sombra. Perfume de resina, ardência curta.</span>
+          </span>
+        </button>
+
+        <button class="pigmento" style="--cor:#B7202B; --i:4" aria-expanded="false">
+          <span class="pigmento__nome">Pimenta-biquinho</span>
+          <span class="pigmento__ficha">
+            <span class="pigmento__origem">Serra do Cipó, Minas Gerais</span>
+            <span class="pigmento__nota">Cheiro de pimenta, ardência quase zero. Serve para quem não aguenta e para quem aguenta.</span>
+          </span>
+        </button>
+
+        <button class="pigmento" style="--cor:#56331E; --i:5" aria-expanded="false">
+          <span class="pigmento__nome">Cumaru</span>
+          <span class="pigmento__ficha">
+            <span class="pigmento__origem">Santarém, Pará</span>
+            <span class="pigmento__nota">A semente que a Amazônia usa no lugar da baunilha. Raspe pouco.</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMO FUNCIONA ============ -->
+  <section class="secao secao--papel" id="como-funciona">
+    <span class="regua" aria-hidden="true"></span>
+    <div class="container">
+      <header class="secao__cabeca">
+        <p class="rotulo">Como funciona</p>
+        <h2 class="secao__titulo">Um ciclo de um mês,<br>sempre nas mesmas datas.</h2>
+        <p class="secao__linha">
+          Nada de estoque parado. A moagem só acontece depois que sabemos quantas caixas
+          vão sair — por isso as datas são fixas.
+        </p>
+      </header>
+
+      <ol class="passos">
+        <li class="passo revelar">
+          <p class="passo__quando">Hoje</p>
+          <h3 class="passo__titulo">Você escolhe o tamanho da caixa</h3>
+          <p class="passo__texto">
+            Três, cinco ou oito temperos por mês. Dá para trocar de plano, pausar ou
+            cancelar pelo site, sem falar com ninguém.
+          </p>
+        </li>
+        <li class="passo revelar">
+          <p class="passo__quando">Todo dia 12</p>
+          <h3 class="passo__titulo">A gente mói</h3>
+          <p class="passo__texto">
+            Os temperos chegam inteiros dos produtores e são moídos e envasados no ateliê,
+            em vidro âmbar. Entre a moagem e a sua cozinha passam quatro dias.
+          </p>
+        </li>
+        <li class="passo revelar">
+          <p class="passo__quando">Dia 16</p>
+          <h3 class="passo__titulo">A caixa chega na sua casa</h3>
+          <p class="passo__texto">
+            Frete incluso para todo o Brasil, com rastreio. Dentro vêm as receitas testadas
+            do mês e a história de quem plantou cada tempero.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PLANOS ============ -->
+  <section class="secao secao--acafrao" id="planos">
+    <span class="regua" aria-hidden="true"></span>
+    <div class="container">
+      <header class="secao__cabeca">
+        <p class="rotulo">Planos</p>
+        <h2 class="secao__titulo">Escolha quantos<br>temperos por mês.</h2>
+        <p class="secao__linha">
+          Todos incluem frete, receitas e troca garantida: se um tempero não agradar,
+          a gente manda outro no mês seguinte.
+        </p>
+
+        <div class="ciclo" role="group" aria-label="Ciclo de cobrança">
+          <button class="ciclo__opcao ativo" data-ciclo="mensal" aria-pressed="true">Mensal</button>
+          <button class="ciclo__opcao" data-ciclo="trimestral" aria-pressed="false">
+            Trimestral <span class="ciclo__desconto">−12%</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="planos">
+
+        <article class="plano revelar">
+          <div class="doses" data-doses="3" aria-hidden="true"></div>
+          <p class="plano__doses">3 temperos por mês</p>
+          <h3 class="plano__nome">Pitada</h3>
+          <p class="plano__preco">
+            <span class="plano__moeda">R$</span><span class="plano__valor" data-mensal="49" data-trimestral="43">49</span><span class="plano__periodo">/mês</span>
+          </p>
+          <p class="plano__cobranca" data-mensal="Cobrado todo mês" data-trimestral="R$ 129 a cada 3 meses">Cobrado todo mês</p>
+          <ul class="plano__itens">
+            <li>3 potes de 30 g em vidro âmbar</li>
+            <li>2 receitas impressas</li>
+            <li>Frete incluso para todo o Brasil</li>
+            <li>Cancela quando quiser</li>
+          </ul>
+          <a class="botao botao--escuro plano__botao" href="#contato">Assinar a Pitada</a>
+        </article>
+
+        <article class="plano plano--destaque revelar">
+          <p class="plano__selo">Mais assinado</p>
+          <div class="doses" data-doses="5" aria-hidden="true"></div>
+          <p class="plano__doses">5 temperos por mês</p>
+          <h3 class="plano__nome">Colher</h3>
+          <p class="plano__preco">
+            <span class="plano__moeda">R$</span><span class="plano__valor" data-mensal="79" data-trimestral="69">79</span><span class="plano__periodo">/mês</span>
+          </p>
+          <p class="plano__cobranca" data-mensal="Cobrado todo mês" data-trimestral="R$ 207 a cada 3 meses">Cobrado todo mês</p>
+          <ul class="plano__itens">
+            <li>5 potes de 40 g, sendo um exclusivo do mês</li>
+            <li>4 receitas impressas e caderno de anotações</li>
+            <li>Ficha do produtor com origem e safra</li>
+            <li>Frete incluso e troca garantida</li>
+          </ul>
+          <a class="botao botao--claro plano__botao" href="#contato">Assinar a Colher</a>
+        </article>
+
+        <article class="plano revelar">
+          <div class="doses" data-doses="8" aria-hidden="true"></div>
+          <p class="plano__doses">8 temperos por mês</p>
+          <h3 class="plano__nome">Panela</h3>
+          <p class="plano__preco">
+            <span class="plano__moeda">R$</span><span class="plano__valor" data-mensal="129" data-trimestral="113">129</span><span class="plano__periodo">/mês</span>
+          </p>
+          <p class="plano__cobranca" data-mensal="Cobrado todo mês" data-trimestral="R$ 339 a cada 3 meses">Cobrado todo mês</p>
+          <ul class="plano__itens">
+            <li>8 potes de 60 g, incluindo pimentas raras</li>
+            <li>6 receitas e o menu completo do mês</li>
+            <li>Moedor de madeira maciça na primeira caixa</li>
+            <li>Encontro ao vivo com o cozinheiro convidado</li>
+          </ul>
+          <a class="botao botao--escuro plano__botao" href="#contato">Assinar a Panela</a>
+        </article>
+
+      </div>
+
+      <p class="planos__nota">
+        Presente? Dá para assinar por 3, 6 ou 12 meses com data de início marcada.
+        Fale com a gente pelo (11) 5194-2118.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="secao secao--jambu" id="depoimentos">
+    <span class="regua" aria-hidden="true"></span>
+    <div class="container">
+      <header class="secao__cabeca">
+        <p class="rotulo rotulo--claro">Quem assina</p>
+        <h2 class="secao__titulo">Quatro mil cozinhas<br>já receberam a caixa.</h2>
+      </header>
+
+      <div class="depoimentos">
+        <figure class="depoimento revelar">
+          <blockquote>
+            Achei que conhecia pimenta. Aí chegou a murupi do Pará e eu passei um mês
+            refazendo o mesmo peixe só para entender o que ela fazia.
+          </blockquote>
+          <figcaption>
+            <img class="depoimento__foto" src="fotos/rita.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <span class="depoimento__id">
+              <span class="depoimento__nome">Rita Sampaio</span>
+              <span class="depoimento__meta">Recife, PE · assina desde 2024</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="depoimento revelar">
+          <blockquote>
+            O colorau de vocês tem cor de verdade. O do mercado, eu descobri depois,
+            era farinha pintada.
+          </blockquote>
+          <figcaption>
+            <img class="depoimento__foto" src="fotos/anderson.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <span class="depoimento__id">
+              <span class="depoimento__nome">Anderson Vaz</span>
+              <span class="depoimento__meta">Curitiba, PR · plano Panela</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="depoimento revelar">
+          <blockquote>
+            Minha filha de nove anos abre a caixa antes de mim e lê a história do produtor
+            em voz alta na cozinha. Virou o dia 16 lá de casa.
+          </blockquote>
+          <figcaption>
+            <img class="depoimento__foto" src="fotos/cleo.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <span class="depoimento__id">
+              <span class="depoimento__nome">Cléo Andrade</span>
+              <span class="depoimento__meta">Belo Horizonte, MG · plano Colher</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="rodape" id="contato">
+  <span class="regua" aria-hidden="true"></span>
+  <div class="container">
+    <div class="rodape__topo">
+      <h2 class="rodape__chamada">Comece pela<br>caixa de agosto.</h2>
+      <a class="botao botao--claro" href="#planos">Escolher meu plano</a>
+    </div>
+
+    <div class="rodape__colunas">
+      <div class="rodape__coluna">
+        <p class="rotulo rotulo--claro">Falar com a gente</p>
+        <p><a href="mailto:contato@pm3.com.br">contato@pm3.com.br</a></p>
+        <p><a href="tel:+551151942118">(11) 5194-2118</a></p>
+        <p class="rodape__discreto">Respondemos de segunda a sexta, das 9h às 18h.</p>
+      </div>
+
+      <div class="rodape__coluna">
+        <p class="rotulo rotulo--claro">Onde a gente fica</p>
+        <p>Centro Empresarial Santa Júlia<br>Rua Vergueiro, 3185 — Liberdade<br>São Paulo, SP · 04101-300</p>
+        <p class="rodape__discreto">Visitas guiadas no primeiro sábado do mês, com hora marcada.</p>
+      </div>
+
+      <div class="rodape__coluna">
+        <p class="rotulo rotulo--claro">Acompanhar</p>
+        <p><a href="#">Instagram @cheiroverde</a></p>
+        <p><a href="#">Caderno de receitas</a></p>
+        <p><a href="#">Nossos produtores</a></p>
+      </div>
+    </div>
+
+    <div class="rodape__fim">
+      <p>Cheiro Verde Temperos Ltda · CNPJ 41.207.884/0001-30</p>
+      <p>Feito em São Paulo, com temperos de sete estados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
