@@ -139,6 +139,91 @@ a { color: inherit; }
 .link-seta::after { content: " →"; }
 .link-seta:hover { color: var(--acafrao); }
 
+/* ---------- 3b. Banner de Black Friday ---------- */
+.bf {
+  background: var(--tinta);
+  color: var(--papel);
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg,
+    var(--urucum)   0 16.666%,
+    var(--acafrao)  0 33.333%,
+    var(--jambu)    0 50%,
+    var(--rosa)     0 66.666%,
+    var(--biquinho) 0 83.333%,
+    var(--cumaru)   0 100%) 1;
+}
+.bf[hidden] { display: none; }
+
+.bf__interno {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 0.7rem var(--margem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bf__texto {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.bf__tag {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--acafrao);
+}
+
+.bf__cupom {
+  background: var(--acafrao);
+  color: var(--tinta);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+}
+
+.bf__cta {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.4rem 0.95rem;
+  border: 1.5px solid var(--papel);
+  border-radius: 999px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.bf__cta:hover { background: var(--papel); color: var(--tinta); }
+
+.bf__fechar {
+  flex: 0 0 auto;
+  background: none;
+  border: 0;
+  color: inherit;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 0.2rem 0.4rem;
+}
+.bf__fechar:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .bf__cta { display: none; }
+  .bf__texto { font-size: 0.82rem; }
+}
+
 /* ---------- 4. Cabeçalho ---------- */
 .topo {
   position: sticky;
@@ -485,6 +570,15 @@ a { color: inherit; }
   font-size: clamp(1.9rem, 3vw, 2.4rem);
   margin: 0 0 0.5rem;
 }
+.plano__antes {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+.plano__antes:empty { display: none; }
+
 .plano__preco {
   display: flex;
   align-items: baseline;
@@ -529,6 +623,15 @@ a { color: inherit; }
   max-width: 46ch;
   opacity: 0.75;
 }
+
+.planos__nota--bf {
+  margin-top: 2.75rem;
+  max-width: 52ch;
+  opacity: 1;
+  border-left: 3px solid var(--tinta);
+  padding-left: 0.9rem;
+}
+.planos__nota--bf + .planos__nota { margin-top: 1rem; }
 
 /* ---------- 10. Depoimentos ---------- */
 .depoimentos {
